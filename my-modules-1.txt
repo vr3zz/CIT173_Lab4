@@ -1,0 +1,89 @@
+Module                  Size  Used by
+nls_utf8               16384  1
+isofs                  45056  1
+fuse                  122880  3
+rfcomm                 86016  16
+nf_conntrack_netbios_ns    16384  1
+nf_conntrack_broadcast    16384  1 nf_conntrack_netbios_ns
+xt_CT                  16384  1
+ip6t_rpfilter          16384  1
+ip6t_REJECT            16384  2
+nf_reject_ipv6         16384  1 ip6t_REJECT
+xt_conntrack           16384  21
+ebtable_nat            16384  1
+ip6table_nat           16384  1
+nf_conntrack_ipv6      16384  12
+nf_defrag_ipv6         20480  1 nf_conntrack_ipv6
+nf_nat_ipv6            16384  1 ip6table_nat
+ip6table_mangle        16384  1
+ip6table_raw           16384  1
+ip6table_security      16384  1
+iptable_nat            16384  1
+nf_conntrack_ipv4      16384  12
+nf_defrag_ipv4         16384  1 nf_conntrack_ipv4
+nf_nat_ipv4            16384  1 iptable_nat
+nf_nat                 36864  2 nf_nat_ipv6,nf_nat_ipv4
+iptable_mangle         16384  1
+iptable_raw            16384  1
+iptable_security       16384  1
+nf_conntrack          147456  9 xt_conntrack,nf_conntrack_ipv6,nf_conntrack_ipv4,nf_nat,nf_nat_ipv6,nf_conntrack_netbios_ns,nf_nat_ipv4,nf_conntrack_broadcast,xt_CT
+libcrc32c              16384  2 nf_conntrack,nf_nat
+devlink                61440  0
+ip_set                 45056  0
+nfnetlink              16384  1 ip_set
+ebtable_filter         16384  1
+ebtables               36864  2 ebtable_nat,ebtable_filter
+ip6table_filter        16384  1
+ip6_tables             32768  7 ip6table_filter,ip6table_raw,ip6table_nat,ip6table_mangle,ip6table_security
+bnep                   24576  2
+vmw_vsock_vmci_transport    32768  2
+vsock                  40960  3 vmw_vsock_vmci_transport
+sunrpc                430080  1
+snd_seq_midi           16384  0
+snd_seq_midi_event     16384  1 snd_seq_midi
+crct10dif_pclmul       16384  0
+crc32_pclmul           16384  0
+ghash_clmulni_intel    16384  0
+intel_rapl_perf        16384  0
+vmw_balloon            24576  0
+snd_ens1371            32768  3
+snd_ac97_codec        143360  1 snd_ens1371
+btusb                  53248  0
+btrtl                  16384  1 btusb
+gameport               16384  1 snd_ens1371
+btbcm                  16384  1 btusb
+ac97_bus               16384  1 snd_ac97_codec
+btintel                24576  1 btusb
+snd_rawmidi            36864  2 snd_seq_midi,snd_ens1371
+snd_seq                81920  2 snd_seq_midi,snd_seq_midi_event
+bluetooth             598016  37 btrtl,btintel,btbcm,bnep,btusb,rfcomm
+uvcvideo              110592  0
+snd_seq_device         16384  3 snd_seq,snd_seq_midi,snd_rawmidi
+videobuf2_vmalloc      16384  1 uvcvideo
+videobuf2_memops       16384  1 videobuf2_vmalloc
+videobuf2_v4l2         28672  1 uvcvideo
+snd_pcm               114688  2 snd_ac97_codec,snd_ens1371
+videobuf2_common       53248  2 videobuf2_v4l2,uvcvideo
+joydev                 24576  0
+videodev              217088  3 videobuf2_v4l2,uvcvideo,videobuf2_common
+media                  45056  2 videodev,uvcvideo
+ecdh_generic           24576  1 bluetooth
+rfkill                 28672  5 bluetooth
+snd_timer              36864  2 snd_seq,snd_pcm
+snd                    94208  13 snd_seq,snd_seq_device,snd_timer,snd_ac97_codec,snd_pcm,snd_rawmidi,snd_ens1371
+soundcore              16384  1 snd
+i2c_piix4              24576  0
+vmw_vmci               81920  2 vmw_balloon,vmw_vsock_vmci_transport
+crc32c_intel           24576  5
+vmwgfx                319488  12
+drm_kms_helper        196608  1 vmwgfx
+ttm                   126976  1 vmwgfx
+drm                   475136  15 vmwgfx,drm_kms_helper,ttm
+serio_raw              16384  0
+mptspi                 28672  2
+scsi_transport_spi     40960  1 mptspi
+mptscsih               45056  1 mptspi
+e1000                 155648  0
+mptbase               106496  2 mptspi,mptscsih
+ata_generic            16384  0
+pata_acpi              16384  0
